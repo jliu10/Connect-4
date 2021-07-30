@@ -2,6 +2,7 @@ color BLUE = color(0,0,200);
 
 void setup() {
   size(720,720);
+  background(200);
   rectMode(CENTER);
   fill(BLUE);
   noStroke();
@@ -11,4 +12,14 @@ void setup() {
   textSize(36);
   fill(BLUE);
   text("CONNECT 4",width/2,50);
+  
+  ellipseMode(CENTER);
+  stroke(0);
+  strokeWeight(2);
+  fill(200);
+  for(int i = 80 + 40; i < 80 + 80 * 7; i+=80) {
+    for(int j = 120 + 40; j < 120 + 80 * 6; j+=80) {
+      circle(i,j,60);
+    }
+  }
 }
