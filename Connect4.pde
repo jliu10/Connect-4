@@ -6,4 +6,9 @@ void setup() {
   fill(BLUE);
   noStroke();
   rect(width/2,height/2,560,480);
+  
+  textAlign(CENTER);
+  textSize(36);
+  fill(BLUE);
+  text("CONNECT 4",width/2,50);
 }
