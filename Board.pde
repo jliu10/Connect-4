@@ -26,7 +26,7 @@ public class Board {
         ellipseMode(CENTER);
         if(board[i][j] == 1) fill(RED);
         else if(board[i][j] == 2) fill(YELLOW);
-        circle(120 + (i * 80), 80 + (j * 80),60);
+        circle(120 + (j * 80), 160 + (i * 80),60);
       }
     }
     // println("board displaying");
