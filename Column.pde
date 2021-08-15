@@ -20,13 +20,12 @@ public class Column {
   
   public void display() {
     hover();
-    //noFill();
-    if(hovering) fill(150);
-    // fill(150,50);
-    // fill(150);
-    rectMode(CENTER);
-    noStroke();
-    rect(xcor,height/2,80,480);
+    if(hovering) {   
+      fill(150,200);
+      rectMode(CENTER);
+      noStroke();
+      rect(xcor,height/2,80,480);
+    }
     println("column displaying");
   }
 }
