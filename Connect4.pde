@@ -45,9 +45,9 @@ void draw() {
   stroke(0);
   strokeWeight(2);
   fill(200);
-  for(int i = 80 + 40; i < 80 + 80 * 7; i+=80) {
-    for(int j = 120 + 40; j < 120 + 80 * 6; j+=80) {
-      circle(i,j,60);
+  for(int i = 120 + 40; i < 120 + 80 * 6; i+=80) {
+    for(int j = 80 + 40; j < 80 + 80 * 7; j+=80) {
+      circle(j,i,60);
     }
   }
   
