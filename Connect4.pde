@@ -1,4 +1,6 @@
 color BLUE = color(0,0,200);
+color RED = color(200,0,0);
+color YELLOW = color(225,225,0);
 Board b;
 
 void setup() {
