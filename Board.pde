@@ -32,5 +32,13 @@ public class Board {
     // println("board displaying");
     
     // TURN INDICATOR
+    fill(BLUE);
+    textAlign(LEFT);
+    textSize(30);
+    text("TURN: ",10,100);
+    ellipseMode(CENTER);
+    fill(YELLOW);
+    if(redTurn) fill(RED);
+    circle(130,85,50);
   }
 }
