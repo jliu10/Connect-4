@@ -17,6 +17,10 @@ public class Column {
     return hovering;
   }
   
+  public int getNum() {
+    return num;
+  }
+  
   public void display() {
     hover();
     if(hovering) {   
