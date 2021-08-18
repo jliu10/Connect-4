@@ -2,6 +2,7 @@ public class Board {
   int[][] board;
   boolean redTurn;
   Column[] columns;
+  int currentCol;
   
   public Board() {
     board = new int[6][7];
@@ -10,15 +11,20 @@ public class Board {
     int i = (int)random(2);
     if(i == 0) redTurn = true; // TEST
     columns = new Column[]{new Column(120,0), new Column(200,1), new Column(280,2), new Column(360,3), new Column(440,4), new Column(520,5), new Column(600,6)};
-  }
+    currentCol = -1;  
+}
   
   public void add(int colNum) {
     
   }
   
   public void display() {
-    for(Column c : columns) c.display();
-    // DISPALY RED/YELLOW BASED ON BOARD VALUES
+    currentCol = -1;
+    for(Column c : columns) {
+      c.display();
+      if(c.isHovering()) currentCol = c.getNum();
+    }
+    // DISPLAY RED/YELLOW BASED ON BOARD VALUES
     for(int i = 0; i < 6; i++) {
       for(int j = 0; j < 7; j++) {
         noFill();
@@ -40,5 +46,10 @@ public class Board {
     fill(YELLOW);
     if(redTurn) fill(RED);
     circle(130,85,50);
+    
+    fill(0);
+    textAlign(LEFT);
+    textSize(12);
+    text("currentCol: " + currentCol ,0,50);
   }
 }
