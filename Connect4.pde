@@ -55,3 +55,7 @@ void draw() {
 }
 
 // reset button
+
+void mouseClicked() {
+  b.clickFunctions();
+}
